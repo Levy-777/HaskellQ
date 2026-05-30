@@ -1,5 +1,7 @@
 # Q-Learning: Frozen Lake em Haskell
 
+https://levy-777.github.io/HaskellQ/
+
 ## Descrição
 
 Implementação do algoritmo **Q-Learning** (Aprendizado por Reforço) aplicado ao 
