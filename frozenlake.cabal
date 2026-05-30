@@ -1,0 +1,19 @@
+cabal-version: 2.4
+name:          frozenlake
+version:       1.0.0
+synopsis:      Q-Learning aplicado ao problema Frozen Lake em Haskell
+description:   Implementacao do algoritmo Q-Learning (Aprendizado por Reforco)
+               para resolver o problema do Frozen Lake (Lago Congelado).
+               O agente aprende a navegar por um lago congelado escorregadio,
+               evitando buracos e chegando ao objetivo.
+author:        Aluno
+license:       MIT
+build-type:    Simple
+
+executable frozenlake
+  main-is:          Main.hs
+  build-depends:    base       >= 4.7 && < 5
+                  , containers >= 0.5
+                  , random     >= 1.1
+  default-language: Haskell2010
+  ghc-options:      -O2 -Wall

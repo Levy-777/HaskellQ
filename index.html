@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q-Learning: Frozen Lake</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="glass-container main-wrapper">
+    <header>
+      <h1>Q-Learning: Frozen Lake</h1>
+      <p>A evolução da inteligência artificial aprendendo a caminhar sobre o gelo</p>
+    </header>
+
+    <!-- Fases (Abas) -->
+    <div class="tabs">
+      <button class="tab-btn active" data-phase="0">1. Início (Tentativa e Erro)</button>
+      <button class="tab-btn" data-phase="1">2. Meio (Aprendendo Padrões)</button>
+      <button class="tab-btn" data-phase="2">3. Fim (Caminho Ótimo)</button>
+    </div>
+
+    <div class="content-area">
+      <!-- Painel Esquerdo: Jogo / Simulação -->
+      <div class="simulation-panel">
+        <h2 id="phase-title">Carregando...</h2>
+        
+        <div class="grid-container" id="grid">
+          <!-- Células geradas via JS -->
+        </div>
+
+        <div class="controls">
+          <button id="btn-play" class="primary-btn">▶ Simular</button>
+          <button id="btn-reset" class="secondary-btn">↻ Reiniciar</button>
+        </div>
+        
+        <div class="status-bar" id="status-text">
+          Aguardando simulação...
+        </div>
+      </div>
+
+      <!-- Painel Direito: O "Cérebro" (Política e Q-Values) -->
+      <div class="brain-panel">
+        <h2>Política Aprendida (O Cérebro)</h2>
+        <p>Setas indicam a melhor decisão que a IA acha para cada quadrado.</p>
+        <div class="policy-grid" id="policy-grid">
+          <!-- Política gerada via JS -->
+        </div>
+
+        <div class="legend">
+          <h3>Legenda do Ambiente</h3>
+          <ul>
+            <li><span class="legend-box start"></span> Posição Inicial</li>
+            <li><span class="legend-box frozen"></span> Gelo Seguro</li>
+            <li><span class="legend-box hole"></span> Buraco (Derrota)</li>
+            <li><span class="legend-box goal"></span> Objetivo (Vitória)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Importar os dados gerados pelo Haskell -->
+  <script src="data.js"></script>
+  <!-- Lógica da interface -->
+  <script src="app.js"></script>
+</body>
+</html>
